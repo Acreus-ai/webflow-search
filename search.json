@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "canonical_zone_name": {
+      "type": ["string", "null"]
+    },
+    "designation_code": {
+      "type": ["string", "null"]
+    },
+    "one_line_summary": {
+      "type": ["string", "null"]
+    },
+    "permitted_uses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "use": { "type": "string" },
+          "source_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["use", "source_ids"]
+      }
+    },
+    "conditional_uses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "use": { "type": "string" },
+          "condition": { "type": ["string", "null"] },
+          "source_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["use", "source_ids"]
+      }
+    },
+    "prohibited_uses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "use": { "type": "string" },
+          "source_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["use", "source_ids"]
+      }
+    },
+    "setbacks": {
+      "type": "object",
+      "properties": {
+        "front": { "type": ["string", "null"] },
+        "side": { "type": ["string", "null"] },
+        "rear": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] },
+        "source_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "FAR": {
+      "type": "object",
+      "properties": {
+        "max": { "type": ["string", "null"] },
+        "range": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] },
+        "source_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "max_height": {
+      "type": "object",
+      "properties": {
+        "value": { "type": ["string", "null"] },
+        "range": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] },
+        "source_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "lot_coverage": { "type": ["string", "null"] },
+    "parking_requirements": { "type": ["string", "null"] },
+    "special_conditions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": { "type": "string" },
+          "issue": { "type": "string" },
+          "source_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["field", "issue", "source_ids"]
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_id": { "type": "string" },
+          "excerpt": { "type": "string" },
+          "url": {
+            "type": "array",
+            "items": { "type": "string", "format": "uri" }
+          }
+        },
+        "required": ["source_id", "url"]
+      }
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["Low", "Medium", "High"]
+    },
+    "ui_card": { "type": "string" },
+    "developer_checklist": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
