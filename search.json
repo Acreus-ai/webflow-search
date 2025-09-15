@@ -1,0 +1,18 @@
+{
+  "source_id":"string",
+  "source_url":["string"],
+  "zone_name":"string|null",
+  "designation_code":"string|null",
+  "one_line_summary":"string|null",
+  "permitted_uses":[{"use":"string","notes":"string|null","source_url":["string"]}],
+  "conditional_uses":[{"use":"string","condition":"string|null","source_url":["string"]}],
+  "prohibited_uses":[{"use":"string","notes":"string|null","source_url":["string"]}],
+  "setbacks":{"front":"string|null","side":"string|null","rear":"string|null","notes":"string|null"},
+  "FAR":{"max":"string|null","notes":"string|null"},
+  "max_height":{"value":"string|null","notes":"string|null"},
+  "lot_coverage":"string|null",
+  "parking_requirements":"string|null",
+  "special_conditions":["string"],
+  "raw_excerpt":"string|null",
+  "confidence":"Low|Medium|High"
+}
